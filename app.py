@@ -14,7 +14,7 @@ except ImportError:
     edge_tts = None
 
 st.set_page_config(
-    page_title="SSC Stenographer Practice Suite",
+    page_title="Devil's Dictation",
     page_icon="📝",
     layout="wide",
 )
