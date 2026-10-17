@@ -1,3 +1,4 @@
 streamlit
 edge-tts
 imageio-ffmpeg
+st-kv-connection
