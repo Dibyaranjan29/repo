@@ -704,9 +704,8 @@ def main():
     st.sidebar.caption("Grade C: up to 5% errors | Grade D: up to 7% errors")
     st.title("🎧 SSC Stenography Shorthand Suite")
 
-# Display the counter neatly at the bottom or inside a metric card
-st.sidebar.markdown("---")
-st.sidebar.metric(label="👥 Total Permanent Viewers", value=current_views)
+    st.sidebar.markdown("---")
+    st.sidebar.metric(label="👥 Total Permanent Viewers", value=current_views)
 
     if mode == "Dictation Engine Mode":
         render_dictation_mode()
