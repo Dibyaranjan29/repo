@@ -19,12 +19,6 @@ st.set_page_config(
     layout="wide",
 )
 
-db = st.connection("kv")
-if "visitor_count" not in db:
-    db["visitor_count"] = 0
-db["visitor_count"] += 1
-current_views = db["visitor_count"]
-
 STRIP_PATTERN = re.compile(r"[,.:;!?\"“”()\[\]{}]")
 ABBREVIATIONS = {"mr", "mrs", "ms", "dr", "prof", "shri", "smt", "st", "jr", "sr", "hon", "gen", "col", "capt", "sri"}
 
@@ -703,9 +697,6 @@ def main():
     st.sidebar.markdown("---")
     st.sidebar.caption("Grade C: up to 5% errors | Grade D: up to 7% errors")
     st.title("🎧 SSC Stenography Shorthand Suite")
-
-    st.sidebar.markdown("---")
-    st.sidebar.metric(label="👥 Total Permanent Viewers", value=current_views)
 
     if mode == "Dictation Engine Mode":
         render_dictation_mode()
